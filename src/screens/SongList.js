@@ -56,6 +56,7 @@ export default class SongList extends React.Component {
 
     render() {
         let setSearchText = (text) => {
+            this.setState({searchText: text})
             // TODO: only start searching when done typing
             console.log("searching for songs with [" + text + "]")
             let originalDataSet = this.state.originalSet;
@@ -82,14 +83,14 @@ export default class SongList extends React.Component {
         }
         return (
             <View style={styles.container}>
+                <TextInput
+                    style={styles.li}
+                    value={this.state.searchText}
+                    onChangeText={setSearchText}
+                    placeholder='Search' />
+
                 { renderIf(this.state.songs.length > 0,
                     <View>
-                        <TextInput
-                            style={styles.li}
-                            value={this.state.searchText}
-                            onChangeText={setSearchText}
-                            placeholder='Search' />
-
                         <FlatList
                             data={this.state.songs}
                             renderItem={(song) =>
