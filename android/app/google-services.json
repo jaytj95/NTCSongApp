@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "955827220203",
+    "firebase_url": "https://ntcsongparse.firebaseio.com",
+    "project_id": "ntcsongparse",
+    "storage_bucket": "ntcsongparse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955827220203:android:17b541ab0128f491",
+        "android_client_info": {
+          "package_name": "com.ntcsongapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955827220203-9omsdmi3tlfogo76pf8c0h3m11ps17jh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0iu-AKSS5ZwGr5HYUyu9iyG-uLivZJjo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,6 +10,7 @@
     "react": "16.4.1",
     "react-native": "0.56.0",
     "react-native-firebase": "^4.3.8",
+    "react-native-htmlview": "^0.13.0",
     "react-navigation": "^2.12.1"
   },
   "devDependencies": {

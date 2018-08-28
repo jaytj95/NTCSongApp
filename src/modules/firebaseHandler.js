@@ -15,7 +15,7 @@ class FirebaseHelper extends React.Component {
         if (prod) {
             // get prod list of songs
             console.log('prod');
-            path = 'song_list';
+            path = 'songlist_v2';
         } else {
             // get debug list of songs
             path = 'songlist_test'
@@ -27,10 +27,11 @@ class FirebaseHelper extends React.Component {
 
     onSongsRetrieved(snapshot) {
         console.log('songs received');
-        let songs = []
+        let songs = [];
         snapshot.forEach((data) => {
             songs.push(data.toJSON())
         })
+        console.log('Song count: ' + songs.length)
         this.props.callback(songs)
     }
 
