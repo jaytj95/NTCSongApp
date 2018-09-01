@@ -2,6 +2,7 @@ const {
     View,
     TextInput,
     FlatList,
+    ActivityIndicator,
 } = ReactNative;
 
 import ReactNative from 'react-native';
@@ -25,7 +26,7 @@ export default class SongList extends React.Component {
         super(props);
         this.state = {
             useProd: true,
-            loading: true,
+            songsReceived: true,
             songs: [],
             searchText: '',
         };
@@ -48,6 +49,7 @@ export default class SongList extends React.Component {
     receivedSongSetFromFirebase(data) {
         this.setState(
             {
+                songsReceived: false,
                 songs: data,
                 originalSet: data
             })
@@ -81,22 +83,31 @@ export default class SongList extends React.Component {
 
             }
         }
+
         return (
             <View style={styles.container}>
-                <TextInput
-                    style={styles.li}
-                    value={this.state.searchText}
-                    onChangeText={setSearchText}
-                    placeholder='Search' />
-
-                { renderIf(this.state.songs.length > 0,
+                { renderIf(this.state.songsReceived > 0,
+                    <ActivityIndicator
+                        style={{ height: 80 }}
+                        color="#6d3f77"
+                        size="large"
+                    />
+                )}
+                { renderIf(!this.state.songsReceived > 0,
                     <View>
+
+                        <TextInput
+                            style={styles.li}
+                            value={this.state.searchText}
+                            onChangeText={setSearchText}
+                            placeholder='Search' />
+
                         <FlatList
                             data={this.state.songs}
                             renderItem={(song) =>
                                 <ListItem item={song}
                                           onPress={() => this.props.navigation.navigate('SongView', song)}/>}
-                            keyExtractor={(song, index) => index}
+                            kxeyExtractor={(song, index) => index}
                         />
                     </View>
                 )}
