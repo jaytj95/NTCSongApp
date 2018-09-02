@@ -89,7 +89,7 @@ export default class SongList extends React.Component {
                 { renderIf(this.state.songsReceived > 0,
                     <ActivityIndicator
                         style={{ height: 80 }}
-                        color="#1C1339"
+                        color="#150B36"
                         size="large"
                     />
                 )}

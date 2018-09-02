@@ -35,7 +35,7 @@ var styles = StyleSheet.create({
         fontSize: 12,
     },
     liTextNum: {
-        color: '#6d3f77',
+        color: '#150B36',
         fontSize: 14,
         fontWeight: 'bold',
     },
