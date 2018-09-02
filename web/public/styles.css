@@ -11,18 +11,29 @@ img {
     width: 35%;
 }
 p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.header {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    font-size: xx-large;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+    font-size: 48px;
 }
+.footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: xx-small;
+    font-family: 'Montserrat', sans-serif;
+}
+
 i {
     color:white;
 }
 .icon_container {
-    font-size: 128px;
+    font-size: 256px;
     display: inline-block;
 }
