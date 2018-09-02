@@ -1,0 +1,28 @@
+body {
+    background: #1C1339;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 35%;
+}
+p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: xx-large;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+i {
+    color:white;
+}
+.icon_container {
+    font-size: 128px;
+    display: inline-block;
+}
